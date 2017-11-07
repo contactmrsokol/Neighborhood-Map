@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neighborhood Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container" data-bind="click: toogleMenu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div>
+      <div class="options-box" data-bind="visible: hide">
+        <h1>Sunny Isles Beach</h1>
+        <div><input data-bind="textInput: userInput, event: {keyup: filterMarkers}" placeholder="Search by name" name="search"></div>
+        <div class="list">
+          <ul data-bind="foreach: locationList">
+            <li data-bind="text: title, visible: visible, click: $parent.openInfoWindow"></li>
+          </ul>
+        </div>
+      </div>
+      <div id="map" data-bind="css: { 'expand-map': hide }"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='knockout-3.4.2.js'></script>
+    <script src='js/app.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-keB1yPb2gtEoWbnSUFF-IvoU9jk__j0&v=3&callback=initMap"
+    async defer onerror="googleError()"></script>
+  </body>
+</html>

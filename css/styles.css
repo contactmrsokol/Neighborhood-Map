@@ -1,0 +1,53 @@
+
+.container {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 327px;
+  z-index: 100;
+}
+
+.move-toogle {
+  left: 35px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+#map 
+{
+  bottom: 0px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  width: 100%;
+}
+
+#map.expand-map {
+  left: 362px;
+}
+
+.options-box {
+  background: #fff;
+  border-radius: 3px;
+  height: 100%;
+  line-height: 35px;
+  padding: 10px 10px 30px 10px;
+  text-align: center;
+  width: 340px;
+}
+
+.hide-option-box {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
